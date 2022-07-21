@@ -74,9 +74,9 @@ console.log("This is code Outside the code block",age);
 */
 
 
+
 /* Lesson 30 Function
 //2ways -> function declarationa -> function expression
-
 function age(){
     console.log("This is age using declaration");
 }
@@ -86,8 +86,16 @@ const  me= function(){
     console.log("This is me inside the function expression");
 };
 
-
 //function declaration supports hoisting while function expression doesnot
 me();
 age();
+*/
+
+/*Lesson 31 Arguments and Parameters
+
+const hello=function(name="Rocky",day="Whenever he wants"){
+    console.log(`${name} is sleeping in ${day}`);
+}
+
+hello("Yujan","Afternoon");
 */
