@@ -95,7 +95,56 @@ age();
 
 const hello=function(name="Rocky",day="Whenever he wants"){
     console.log(`${name} is sleeping in ${day}`);
-}
+};
 
 hello("Yujan","Afternoon");
+*/
+
+/* Lesso33 Arrow function 
+//Arrow Function doesnot use function keyword
+// One parameter doesnot need the paranthesis But empty and more then one need
+//Short code
+// if only return you can write directly
+
+//Only One parameter with only return in code block
+let area=length => length**2;
+console.log(area(10));
+
+//2parameters with some logic and return
+const total = (array,per) => {
+    let sum=0;
+    for(let i =0; i<array.length;i++){
+        sum+=array[i]+array[i]*per;
+    }
+    return sum;
+};
+console.log(total([10,50,100,150,200],0.13));
+*/
+
+/*Lesson 35 Callback Function 
+//Function as a parameter
+//Execution order of the function is being maintained by the callback function??
+let firstFunction= (callBackFunction)=>{
+    let sum= 20+34;
+    callBackFunction(sum);
+    console.log("firstFunction is executing!!");
+};
+
+firstFunction((sum)=>{
+    console.log(sum)
+    console.log("this is the callback function")});
+*/
+
+/* Lesson 35 foreach Method 
+//foreach takes argument as a callback function in JS
+//Syntax anime.forEach(function(currentValue,index,arr),thisValue)
+let anime=['Naruto','MHA','OnePiece'];
+// let anime1=[...anime1];
+
+anime.forEach((currentAnime,index,array)=> {
+    array[index]=currentAnime +" My Fav";
+    console.log(`${currentAnime}\t${index}\t${array}`);
+});
+
+console.log(anime);
 */
