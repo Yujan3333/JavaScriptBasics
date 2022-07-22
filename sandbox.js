@@ -148,3 +148,73 @@ anime.forEach((currentAnime,index,array)=> {
 
 console.log(anime);
 */
+
+/*Lesson 38 to 40: Creating a Object literal 
+let anime = {
+    name:'Naruto',
+    year:2022,
+    location: 'Japan',
+    blogs: ['why Naruto is the best anime of all time?','10 things about Naruto'],
+    register: function(){
+        console.log("This is a method inside anime");
+    },
+    //One way to declare a method inside the object
+    login: function()
+    {
+        console.log("User logged In to watch Naruto");
+    }, 
+
+    logout()
+    {
+        console.log("User logged Out and didnot watch Naruto");
+    },
+    
+   //Using the "this" keyword and arrow function cannot be used because "this" will be window(global) object
+    //One way to use method inside a object
+    logBlogs() {       ////Or logBlogs()
+        console.log("The Blog contained in anime is:");
+        // The forEach method user a callback function as a parameter and i am using here the arrow function
+        // Only one parameter so no () and only one statement so no{}
+        this.blogs.forEach(blog=>console.log(blog));
+    }
+    
+
+};
+// //Dot Notation to access object
+// console.log(anime);
+// console.log(anime.name);
+// // Can Change the value
+// anime.year=1999;
+// console.log(anime.year);
+// //Square bracket notation to access object
+// console.log(anime['name']);
+// anime['name']='One Piece';
+// console.log(anime['name']);
+// // typeof
+// console.log(typeof anime);
+
+// //Global Window Object
+console.log(this);
+
+anime.login();
+anime.logout();
+anime.logBlogs();
+*/
+
+/* Lesson41: Objects in a array
+
+const anime={
+    name:"Naruto",
+    year:2022,
+    otherAnime:[
+        {name:"OnePiece",year:1999},
+        {name:"Bleach",year:2020}
+    ],
+    display(){
+        console.log(this.name+'\t'+this.year);
+        this.otherAnime.forEach(animeName=>console.log(animeName.name,animeName.year));
+    }
+};
+
+anime.display();
+*/
