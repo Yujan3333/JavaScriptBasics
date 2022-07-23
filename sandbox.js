@@ -218,3 +218,82 @@ const anime={
 
 anime.display();
 */
+
+/*Lesson 46 // //querySekector
+//Selects only one p form the top
+const single=document.querySelector('p');
+console.log(single);
+//Selects all the p in the DOM
+const multiple=document.querySelectorAll("p");
+console.log(multiple);
+//Selects all class with classname = class1
+const multipleTwo=document.querySelectorAll(".class1");
+console.log(multipleTwo);
+*/
+
+/*Lesson 47
+// Html collection format is there and no forEach method can be used in this unlike the nodelist of querySelector
+const para= document.getElementById('');
+const para1=document.getElementsByClassName('');
+const para2=document.getElementsByTagName('');
+*/
+
+/*Lesson 48 adding and changing page content 
+const para=document.querySelector('p');
+console.log(para.innerText);
+para.innerText+=" I am appending something extra";
+console.log(para.innerText);
+
+// const multiple=document.querySelectorAll(".class1");
+// multiple.forEach(content=>{
+//     console.log(content.innerText);
+//     content.innerText+=" I am appending this inside the querySelectorAll"
+//     console.log(content.innerText);
+// })
+// console.log(multiple[0].innerText);
+
+let anime=['Naruto','Onepiece'];
+const content=document.querySelector('.class1');
+
+anime.forEach(name=>{
+    content.innerHTML += `<p>${name}</p>`;
+})
+*/
+
+/*Lesson 49: getAttribute and setAtrribute 
+const att=document.querySelector('a');
+console.log(att.getAttribute('href'));
+
+att.setAttribute('href','www.youtube.com');
+att.innerText="Link to Youtube";
+
+//setting attribute that doesnot previously exist
+att.setAttribute('style','color:red');
+*/
+
+/*Lesson 51: classList
+// const selector=document.querySelector(".red");
+// console.log(selector.classList);
+// selector.classList.add("green");
+// selector.classList.remove("red");
+// console.log(selector.classList);                                    
+*/
+
+/*classList property in JS
+const para=document.querySelectorAll('p');
+para.forEach(element=>{
+    //innerText gives only the visible text // <span style="display:none">red and green</span>
+    console.log(element.innerText);
+    //textContent gives all the text including the hidden one
+    if(element.textContent.includes('error')){
+        element.classList.add('red');
+    }
+    if(element.textContent.includes('success')){
+        element.classList.add('green');
+    }
+    const header=document.querySelector('.test');
+    //works like add but if used twice removes the class 
+    header.classList.toggle('another');
+    // header.classList.toggle('another');
+});
+*/

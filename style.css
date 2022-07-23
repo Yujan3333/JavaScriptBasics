@@ -1,0 +1,15 @@
+.red{
+    color:red;
+    padding: 10px;
+    border: 2px dotted crimson;
+}
+
+.green{
+    color: green;
+    padding-left: 10px;
+    border: 1px solid green;
+}
+
+.result{
+    font-size: 30px;
+}
