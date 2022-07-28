@@ -1,0 +1,9 @@
+li{
+    list-style-type: none;
+    border: 2px solid whitesmoke;
+    margin: 10px auto;
+    padding: 10px;
+    background-color: rgb(14, 52, 16);
+    color: aliceblue;
+    width: 500px;
+}

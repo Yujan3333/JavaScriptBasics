@@ -297,3 +297,34 @@ para.forEach(element=>{
     // header.classList.toggle('another');
 });
 */
+
+/*HTML CODE lesson52 */
+/*<article>    
+        <h1>Header1</h1>
+        <p>Paragraph1</p>
+        <p>paragraph2</p>
+        <p>paragraph3</p>
+        <script src="/sandbox.js"></script>
+    </article> */
+/*For chldren  
+const article=document.querySelector('article');
+console.log(article.children);  //HTML collection forEach cannot be used
+console.log(Array.from(article.children));   //Changed to array forEach can be used
+console.log(article.children);    //Doesnot change HTMLcollection only
+
+Array.from(article.children).forEach(child => {
+    console.log(child)
+});
+*/
+/*parentElement Practice
+const title=document.querySelector("h1");
+console.log(title.parentElement);
+console.log(title.parentElement.parentElement);
+
+console.log(title.nextElementSibling);
+console.log(title.previousElementSibling);
+
+//chaining
+Array.from(title.previousElementSibling.parentElement.children).forEach(child=> console.log(`the children here is ${child}`));
+*/
+
