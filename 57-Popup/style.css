@@ -1,0 +1,53 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+button{
+        display: block;
+        background-color: brown;
+        color: wheat;
+        margin: 10px auto;
+        padding: 5px;
+}
+
+
+/*For fading out the background*/
+.popup-wrapper{
+    background-color: rgba(0, 0, 0, 0.5);
+    position:fixed;
+    top: 0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    /*Here display none is used to hide the content of the popup until the button is clicked*/
+    display: none;
+}
+
+/*positioning the content of the popup*/
+.popup{
+    background-color: aliceblue;
+    text-align: center;
+    margin: 10px auto;
+    padding: 40px;
+    width: 100%;
+    max-width: 300px;
+    position: relative;
+}
+
+/*Accessing the popup s anchor tag to make it like a button*/
+.popup  a{    
+    display: inline-block;
+    background-color: brown;
+    text-decoration: none;
+    color: wheat;
+    padding: 6px; 
+}
+
+/*To close the popup screen*/
+.popup-close{
+    position: absolute;
+    top: 0;
+    right: 5px;
+    cursor: pointer;
+}
