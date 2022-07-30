@@ -58,3 +58,15 @@ const yujanTotalMarks= students.reduce((acc,curr) =>{
 
 console.log(yujanTotalMarks);
 */
+
+/*Lesson74:Find Method*/
+const array=[10,50,20,30,60,70,40,80,90];
+
+//finding the 1st value greater then 50
+const greater=array.find((value)=>{
+    if(value>50){
+        return true;
+    }
+});
+
+console.log(greater);
