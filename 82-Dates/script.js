@@ -48,3 +48,5 @@ console.log("Hours:",hours);
 const days=Math.round(hours/24);
 console.log("Last posted Days Count",days);
 */
+
+/*Digital Clock Making*/
