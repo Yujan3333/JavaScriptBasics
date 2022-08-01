@@ -50,3 +50,20 @@ console.log("Last posted Days Count",days);
 */
 
 /*Digital Clock Making*/
+const clock=document.querySelector(".clock");
+
+const everySecondClockUpdate=()=>{
+    const time= new Date();
+    const h = time.getHours();
+    const m = time.getMinutes();
+    const s = time.getSeconds();
+
+    const html=`
+    <span>${h}</span>:
+    <span>${m}</span>:
+    <span>${s}</span>
+    `
+    clock.innerHTML=html;
+};
+
+setInterval(everySecondClockUpdate, 1000);
