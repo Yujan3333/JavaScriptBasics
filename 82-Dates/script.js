@@ -49,7 +49,7 @@ const days=Math.round(hours/24);
 console.log("Last posted Days Count",days);
 */
 
-/*Digital Clock Making*/
+/*Digital Clock Making
 const clock=document.querySelector(".clock");
 
 const everySecondClockUpdate=()=>{
@@ -67,3 +67,22 @@ const everySecondClockUpdate=()=>{
 };
 
 setInterval(everySecondClockUpdate, 1000);
+*/
+
+/*Using dateFns library 
+const now= Date();
+
+// console.log(dateFns.isToday(now));
+
+//formatting time and dates
+console.log(dateFns.format(now,'YYYY'));
+console.log(dateFns.format(now,'MMM'));
+console.log(dateFns.format(now,'dddd'));
+console.log(dateFns.format(now,'Do'));
+console.log(dateFns.format(now,'dddd,Do,MMM,YYYY'));
+//output Tuesday,2nd,Aug,2022
+
+//Comparing dates
+const before=new Date("Febraury 2 2022 12:00:00");
+console.log(dateFns.distanceInWords(now,before,{addSuffix:true}));
+*/
