@@ -28,20 +28,22 @@ request.send();
 //if we get some error in the 2nd argument of open then we go through all the phases until 4 and we get the satus 404 and no reponse text
 */
 
-
+/*Using JSON created by myself */
 //writing all the above code inside the function todos to make it more reusable
 const getTodos= (callback)=>{
     const request = new XMLHttpRequest();
     request.addEventListener('readystatechange',()=>{
         if(request.readyState === 4 && request.status === 200){
             //using callback function
-            callback(undefined,request.responseText);
+            //here request.responseText is in string not in JS so changing it to JS object
+            const data= JSON.parse(request.responseText)
+            callback(undefined,data);
         } else if(request.readyState ===4){
             callback("could no fetch the data", undefined);
         }
     });
 
-    request.open("GET","https://jsonplaceholder.typicode.com/todos");
+    request.open("GET","todos.json ");
     request.send();
 }
 
@@ -59,3 +61,4 @@ getTodos((err ,data)=>{
 });
 console.log(3);
 console.log(4);
+
