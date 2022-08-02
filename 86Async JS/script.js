@@ -62,6 +62,8 @@ getTodos((err ,data)=>{
 console.log(3);
 console.log(4);
 */
+
+
 /*Concept of callback hell i.e. nesting of callback function inside another callback function */
 const getTodos=(resources,callback)=>{
     const request= new XMLHttpRequest();
