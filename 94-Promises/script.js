@@ -16,5 +16,20 @@ const getTodos= (resource)=>{
     });
 };
 
-getTodos('/94-Promises/todos/yujan.json').then(data=>console.log('promise is resolved:',data)
-    ).catch(err=>console.log("Promises is rejected:",err));
+
+// getTodos('/94-Promises/todos/yujan.json')
+    // .then(data=>console.log('promise is resolved:',data))
+    // .catch(err=>console.log("Promises is rejected:",err));
+
+    //chaining the promises which solves the callback hell
+getTodos('/94-Promises/todos/yujan.json').then(data=>{
+    console.log("Promise 1 resolved",data);
+    return getTodos('/94-Promises/todos/rabee.json');
+}).then(data=>{
+    console.log("Promise 2 resolved",data);
+    return getTodos('/94-Promises/todos/prabhat.json');
+}).then(data=>{
+    console.log("Promise 3 resolved",data);
+}).catch(err=>{
+        console.log("Promise rejected :",err);
+    })
