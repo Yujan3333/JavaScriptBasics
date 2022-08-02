@@ -28,7 +28,7 @@ request.send();
 //if we get some error in the 2nd argument of open then we go through all the phases until 4 and we get the satus 404 and no reponse text
 */
 
-/*Using JSON created by myself */
+/*Using JSON created by myself 
 //writing all the above code inside the function todos to make it more reusable
 const getTodos= (callback)=>{
     const request = new XMLHttpRequest();
@@ -61,4 +61,30 @@ getTodos((err ,data)=>{
 });
 console.log(3);
 console.log(4);
+*/
+/*Concept of callback hell i.e. nesting of callback function inside another callback function */
+const getTodos=(resources,callback)=>{
+    const request= new XMLHttpRequest();
+    request.addEventListener('readystatechange',()=>{
+        if(request.readyState === 4 && request.status === 200){
+            const data= JSON.parse(request.responseText)
+            callback(undefined,data);
+        }else if(request.readyState === 4){
+            callback("couldnot fetch the data",undefined);
+        }
+    });
 
+    request.open("GET",resources);
+    request.send();
+};
+
+//nesting of the callback function here is called the callback hell
+getTodos('todos/1.json',(err,data)=>{
+    console.log(data);
+    getTodos('todos/2.json',(err,data)=>{
+        console.log(data);
+        getTodos('todos/3.json',(err,data)=>{
+            console.log(data);
+        });
+    });
+});
