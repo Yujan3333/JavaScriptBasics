@@ -17,13 +17,20 @@ fetch('todos/yujan.json').then((response)=>{
 
 //Lesson 97 async and await
 const getTodos= async ()=>{
-    const response = await fetch('todos/yujan1.json');
+    const response = await fetch('todos/yujan.json');
     //fetch returns promise
-    const data = await response.json();
+    //if the URL of the fetch is wrong it still shows error in the json()to combat this we check the status is 200 or not
+    if(response.status !== 200){
+        //throw new Error() makes a Error() object
+        throw new Error("cannot fetch the data");
+    }
+    //if error in json use err.message property in the catch method
+    const data = await response.json(); 
     // await returns promise
     return data;
 }
 
 //getTodos returns promise so to resolve we use then()
 getTodos()
-    .then((data)=>console.log(data));
+    .then((data)=>console.log(data))
+    .catch((err)=>console.log("rejected :",err.message));
