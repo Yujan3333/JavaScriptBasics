@@ -1,4 +1,4 @@
-//fetch api
+/*fetch api
 
 // even is url is error no problem
 //promise in only rejected if we get the network error
@@ -12,4 +12,18 @@ fetch('todos/yujan.json').then((response)=>{
     console.log(data);
 }).catch((err)=>{
     console.log("rejected: ",err);
-})
+});
+*/
+
+//Lesson 97 async and await
+const getTodos= async ()=>{
+    const response = await fetch('todos/yujan1.json');
+    //fetch returns promise
+    const data = await response.json();
+    // await returns promise
+    return data;
+}
+
+//getTodos returns promise so to resolve we use then()
+getTodos()
+    .then((data)=>console.log(data));
